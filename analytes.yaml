@@ -1,0 +1,416 @@
+# analytes.yaml — каталог лабораторных показателей с алиасами
+#
+# Проблема, которую решает этот файл: одна и та же «гамма-глутамилтрансфераза»
+# в трёх лабораториях называется тремя способами. Нормализуем к code,
+# и тренд по показателю собирается одним SQL-запросом.
+#
+# Добавляйте новые показатели и алиасы по мере загрузки ваших документов.
+
+analytes:
+
+  # === БИОХИМИЯ ===
+  - code: glucose
+    name_ru: Глюкоза
+    unit: ммоль/л
+    category: biochemistry
+    aliases:
+      - Глюкоза
+      - Glucose
+      - Сахар крови
+      - Сахар
+
+  - code: hba1c
+    name_ru: Гликированный гемоглобин
+    unit: "%"
+    category: biochemistry
+    aliases:
+      - HbA1c
+      - Гликированный гемоглобин
+      - HbA1с
+      - А1с
+
+  - code: creatinine
+    name_ru: Креатинин
+    unit: мкмоль/л
+    category: biochemistry
+    aliases:
+      - Креатинин
+      - Creatinine
+      - Крeатинин
+
+  - code: urea
+    name_ru: Мочевина
+    unit: ммоль/л
+    category: biochemistry
+    aliases:
+      - Мочевина
+      - Urea
+      - BUN
+
+  - code: uric_acid
+    name_ru: Мочевая кислота
+    unit: мкмоль/л
+    category: biochemistry
+    aliases:
+      - Мочевая кислота
+      - Uric acid
+
+  - code: alt
+    name_ru: АЛТ
+    unit: Ед/л
+    category: biochemistry
+    aliases:
+      - АЛТ
+      - ALT
+      - Аланинаминотрансфераза
+      - Аланинтрансаминаза
+      - АЛАТ
+
+  - code: ast
+    name_ru: АСТ
+    unit: Ед/л
+    category: biochemistry
+    aliases:
+      - АСТ
+      - AST
+      - Аспартатаминотрансфераза
+      - Аспартаттрансаминаза
+      - АСАТ
+
+  - code: ggt
+    name_ru: ГГТ
+    unit: Ед/л
+    category: biochemistry
+    aliases:
+      - ГГТ
+      - GGT
+      - ГГТП
+      - Гамма-ГТ
+      - Гамма-глутамилтрансфераза
+      - Гамма-глутамилтранспептидаза
+
+  - code: alp
+    name_ru: ЩФ (щелочная фосфатаза)
+    unit: Ед/л
+    category: biochemistry
+    aliases:
+      - ЩФ
+      - ALP
+      - Щелочная фосфатаза
+      - Alkaline phosphatase
+
+  - code: bilirubin_total
+    name_ru: Билирубин общий
+    unit: мкмоль/л
+    category: biochemistry
+    aliases:
+      - Билирубин общий
+      - Total bilirubin
+      - Билирубин
+
+  - code: total_protein
+    name_ru: Белок общий
+    unit: г/л
+    category: biochemistry
+    aliases:
+      - Белок общий
+      - Total protein
+      - Общий белок
+
+  - code: albumin
+    name_ru: Альбумин
+    unit: г/л
+    category: biochemistry
+    aliases:
+      - Альбумин
+      - Albumin
+
+  # === ЛИПИДНЫЙ ПРОФИЛЬ ===
+  - code: cholesterol_total
+    name_ru: Холестерин общий
+    unit: ммоль/л
+    category: lipids
+    aliases:
+      - Холестерин общий
+      - Total cholesterol
+      - Холестерин
+      - ОХС
+
+  - code: ldl
+    name_ru: ЛПНП (холестерин)
+    unit: ммоль/л
+    category: lipids
+    aliases:
+      - ЛПНП
+      - LDL
+      - Холестерин ЛПНП
+      - LDL-C
+      - Холестерин-ЛПНП
+
+  - code: hdl
+    name_ru: ЛПВП (холестерин)
+    unit: ммоль/л
+    category: lipids
+    aliases:
+      - ЛПВП
+      - HDL
+      - Холестерин ЛПВП
+      - HDL-C
+      - Холестерин-ЛПВП
+
+  - code: triglycerides
+    name_ru: Триглицериды
+    unit: ммоль/л
+    category: lipids
+    aliases:
+      - Триглицериды
+      - Triglycerides
+      - ТГ
+      - TG
+
+  # === ГОРМОНЫ ===
+  - code: tsh
+    name_ru: ТТГ
+    unit: мМЕ/л
+    category: hormones
+    aliases:
+      - ТТГ
+      - TSH
+      - Тиреотропный гормон
+
+  - code: t4_free
+    name_ru: Т4 свободный
+    unit: пмоль/л
+    category: hormones
+    aliases:
+      - Т4 своб
+      - T4 free
+      - fT4
+      - Т4 свободный
+      - FT4
+
+  - code: t3_free
+    name_ru: Т3 свободный
+    unit: пмоль/л
+    category: hormones
+    aliases:
+      - Т3 своб
+      - T3 free
+      - fT3
+      - Т3 свободный
+
+  - code: insulin
+    name_ru: Инсулин
+    unit: мкМЕ/мл
+    category: hormones
+    aliases:
+      - Инсулин
+      - Insulin
+
+  - code: cortisol
+    name_ru: Кортизол
+    unit: нмоль/л
+    category: hormones
+    aliases:
+      - Кортизол
+      - Cortisol
+
+  # === ОБЩИЙ АНАЛИЗ КРОВИ ===
+  - code: hemoglobin
+    name_ru: Гемоглобин
+    unit: г/л
+    category: hematology
+    aliases:
+      - Гемоглобин
+      - Hemoglobin
+      - HGB
+      - Hb
+
+  - code: rbc
+    name_ru: Эритроциты
+    unit: "×10¹²/л"
+    category: hematology
+    aliases:
+      - Эритроциты
+      - RBC
+      - Red blood cells
+
+  - code: wbc
+    name_ru: Лейкоциты
+    unit: "×10⁹/л"
+    category: hematology
+    aliases:
+      - Лейкоциты
+      - WBC
+      - White blood cells
+
+  - code: platelets
+    name_ru: Тромбоциты
+    unit: "×10⁹/л"
+    category: hematology
+    aliases:
+      - Тромбоциты
+      - PLT
+      - Platelets
+
+  - code: hematocrit
+    name_ru: Гематокрит
+    unit: "%"
+    category: hematology
+    aliases:
+      - Гематокрит
+      - HCT
+      - Ht
+
+  - code: mcv
+    name_ru: Средний объём эритроцита
+    unit: фл
+    category: hematology
+    aliases:
+      - СОЭ
+      - MCV
+      - Средний объём эритроцита
+
+  - code: esr
+    name_ru: СОЭ
+    unit: мм/час
+    category: hematology
+    aliases:
+      - СОЭ
+      - ESR
+      - Скорость оседания эритроцитов
+
+  # === ЖЕЛЕЗО ===
+  - code: ferritin
+    name_ru: Ферритин
+    unit: нг/мл
+    category: iron
+    aliases:
+      - Ферритин
+      - Ferritin
+
+  - code: serum_iron
+    name_ru: Железо сывороточное
+    unit: мкмоль/л
+    category: iron
+    aliases:
+      - Железо
+      - Serum iron
+      - Fe сыворот
+      - Железо сыворот
+
+  - code: transferrin_sat
+    name_ru: Насыщение трансферрина
+    unit: "%"
+    category: iron
+    aliases:
+      - Насыщение трансферрина
+      - TIBC saturation
+      - Трансферрин насыщ
+
+  # === ЭЛЕКТРОЛИТЫ ===
+  - code: sodium
+    name_ru: Натрий
+    unit: ммоль/л
+    category: electrolytes
+    aliases:
+      - Натрий
+      - Na
+      - Sodium
+
+  - code: potassium
+    name_ru: Калий
+    unit: ммоль/л
+    category: electrolytes
+    aliases:
+      - Калий
+      - K
+      - Potassium
+
+  - code: calcium_total
+    name_ru: Кальций общий
+    unit: ммоль/л
+    category: electrolytes
+    aliases:
+      - Кальций общий
+      - Ca
+      - Calcium total
+      - Кальций
+
+  - code: magnesium
+    name_ru: Магний
+    unit: ммоль/л
+    category: electrolytes
+    aliases:
+      - Магний
+      - Mg
+      - Magnesium
+
+  # === ВОСПАЛЕНИЕ ===
+  - code: crp
+    name_ru: С-реактивный белок
+    unit: мг/л
+    category: inflammation
+    aliases:
+      - СРБ
+      - CRP
+      - С-реактивный белок
+      - С-реакт белок
+
+  - code: esr_westergren
+    name_ru: СОЭ (по Вестергрену)
+    unit: мм/час
+    category: inflammation
+    aliases:
+      - СОЭ по Вестергрену
+      - ESR Westergren
+
+  # === ВИТАМИНЫ ===
+  - code: vitamin_d
+    name_ru: Витамин D (25-OH)
+    unit: нг/мл
+    category: vitamins
+    aliases:
+      - Витамин D
+      - 25-OH D3
+      - 25(OH)D
+      - Vitamin D
+      - 25-гидроксивитамин D
+
+  - code: vitamin_b12
+    name_ru: Витамин B12
+    unit: пг/мл
+    category: vitamins
+    aliases:
+      - Витамин B12
+      - B12
+      - Цианокобаламин
+
+  - code: folate
+    name_ru: Фолиевая кислота
+    unit: нг/мл
+    category: vitamins
+    aliases:
+      - Фолиевая кислота
+      - Folate
+      - Фолат
+
+  # === СВЁРТЫВАЕМОСТЬ ===
+  - code: inr
+    name_ru: МНО (INR)
+    unit: ""
+    category: coagulation
+    aliases:
+      - МНО
+      - INR
+      - Международное нормализованное отношение
+
+  - code: ptt
+    name_ru: АЧТВ
+    unit: сек
+    category: coagulation
+    aliases:
+      - АЧТВ
+      - PTT
+      - APTT
+      - Активированное частичное тромбопластиновое время

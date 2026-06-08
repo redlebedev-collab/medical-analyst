@@ -1,0 +1,40 @@
+# Медицинские данные — НИКОГДА не коммитить
+data/
+*.db
+*.db-wal
+*.db-shm
+
+# Секреты
+.env
+*.key
+*.pem
+
+# Временные файлы
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+
+# Виртуальное окружение
+venv/
+.venv/
+env/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Выходные файлы (опционально — раскомментируйте если не нужны в репозитории)
+# *.docx
+# *.pdf
