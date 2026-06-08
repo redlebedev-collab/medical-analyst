@@ -54,7 +54,24 @@ Problem list → Markdown + DOCX (для печати)
 
 ---
 
-## Быстрый старт
+## Запуск приложения (рекомендуется)
+
+Проект включает полноценный веб-интерфейс с drag & drop загрузкой документов,
+графиками трендов и двумя режимами анализа.
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+Браузер откроется автоматически. В боковой панели выберите режим:
+
+- **☁️ Облачный** — введите API-ключ Anthropic и анализируйте сразу
+- **💻 Локальный** — установите [Ollama](https://ollama.com), запустите `ollama pull llama3.1`, затем `ollama serve`
+
+---
+
+## Быстрый старт (командная строка)
 
 ### 1. Клонируйте репозиторий
 
@@ -240,7 +257,23 @@ Problem list → Markdown + DOCX (print-ready)
 
 ---
 
-## Quick Start
+## Running the App (recommended)
+
+The project includes a full web interface with drag & drop uploads, trend charts, and two analysis modes.
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+The browser opens automatically. In the sidebar, choose your mode:
+
+- **☁️ Cloud** — enter your Anthropic API key and start analyzing
+- **💻 Local** — install [Ollama](https://ollama.com), run `ollama pull llama3.1`, then `ollama serve`
+
+---
+
+## Quick Start (command line)
 
 ### 1. Clone the repository
 
